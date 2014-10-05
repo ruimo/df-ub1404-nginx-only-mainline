@@ -15,6 +15,8 @@ RUN echo "deb-src http://nginx.org/packages/mainline/ubuntu/ trusty nginx" >> /e
 RUN apt-get update
 RUN apt-get install -y nginx w3m
 
+ADD default.conf /etc/nginx/conf.d/default.conf
+
 EXPOSE 80
 EXPOSE 443
 
